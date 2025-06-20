@@ -10,7 +10,7 @@ const Slider = () => {
     <Button type="primary" onClick={()=>navigate('/')}>Home</Button>
     </div>
 <div className="h-[300px] w-full p-10"> 
-    <Carousel autoplay dotPosition="top" effect="scrollx" autoplaySpeed={3000} dots={false}>
+    <Carousel autoplay dotPosition="top" effect="fade" arrows  autoplaySpeed={1000} dots={false}>
       <div>
         <h1 className="text-white text-center leading-[160px] bg-red-500">Slide 1</h1>
       </div>

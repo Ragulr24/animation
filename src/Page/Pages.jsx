@@ -16,7 +16,7 @@ const Pages = () => {
     {
       title: "Price",
       dataIndex: "price",
-      render: (value) => `₹ ${value}`,
+      render: (value) => `₹${value}`,
     },
     {
       title: "Description",
@@ -56,7 +56,7 @@ const Pages = () => {
         </Button>
       </div> 
       <div>
-        <Table columns={columns} dataSource={dataSource} pagination={{pageSize:5}}/>
+        <Table columns={columns} dataSource={dataSource} pagination={{pageSize:6}}/>
       </div>
     </>
   );

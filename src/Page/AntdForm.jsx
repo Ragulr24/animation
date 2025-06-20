@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Form,
   Button,
@@ -63,6 +63,29 @@ const AntdForm = () => {
             >
               <Input placeholder="Type your name" />
             </Form.Item>
+            <Form.Item
+              name="mobile"
+              label="Mobile Number"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your mobile number",
+                },
+                {
+                  type:'tel',  
+                  pattern: /^[6-9]\d{9}$/,
+                  message: "Please enter a valid 10-digit mobile number",
+                },
+              ]}
+              hasFeedback
+            >
+              <Input
+                maxLength={10}
+                placeholder="Enter your mobile number"
+                type="tel"
+              />
+            </Form.Item>
+
             <Form.Item
               name="email"
               label="Email"
@@ -173,7 +196,8 @@ const AntdForm = () => {
               ]}
             >
               <Checkbox>
-                Agree to our <a href="https://google.com">Terms and Conditions</a>
+                Agree to our{" "}
+                <a href="https://google.com">Terms and Conditions</a>
               </Checkbox>
             </Form.Item>
             <Form.Item className="text-center">

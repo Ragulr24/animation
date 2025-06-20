@@ -63,6 +63,7 @@ const TodoList = () => {
     };
 
     try {
+      /*
       const response = await fetch(
         `https://api.freeapi.app/api/v1/todos/${id}`,
         {
@@ -73,13 +74,14 @@ const TodoList = () => {
           body: JSON.stringify(formData),
         }
       );
-      /*
+      */
+      
       const response = await axios.patch(
         `https://api.freeapi.app/api/v1/todos/${id}`,
         formData
       );
-      */
-      const result = await response.json();
+
+      const result = await response.data;
 
       if (result.success) {
         const updatedTodo = result.data;
